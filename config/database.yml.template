@@ -1,0 +1,12 @@
+default: &default
+  adapter: mysql2
+  username:
+  password:
+
+development:
+  <<: *default
+  database: ratesapp_development
+
+test:
+  <<: *default
+  database: ratesapp_test

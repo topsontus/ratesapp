@@ -1,0 +1,15 @@
+<% nav_bar_props = {
+  current_user: current_user.present?,
+  logOutUrl: destroy_user_session_path }.to_json
+%>
+<% admin_props = {
+  forced_rate: rate&.forced_rate,
+  forced_rate_expiration: rate&.forced_rate_expiration,
+  ratePostUrl: admin_rates_path
+}.to_json
+%>
+
+<div id="navBar-app" data="<%= nav_bar_props %>"></div>
+<div id="admin-app" data="<%= admin_props %>"></div>
+
+<%= javascript_pack_tag 'admin' %>

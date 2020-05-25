@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create!(email: 'admin@admin.com', password: 'password', name: 'admim')
+Rate.create!(currency_from: 'USD', currency_to: 'RUB', forced_rate_expiration: Time.current)

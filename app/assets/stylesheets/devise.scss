@@ -1,0 +1,31 @@
+.logInput {
+  min-width: 400px;
+}
+
+nav.form-border {
+  border: solid 1px rgb(18, 132, 231);
+  border-radius: 5px 5px 0 0;
+}
+
+form.form-border {
+  border: solid 1px rgb(18, 132, 231);
+}
+
+.form-border-padding {
+  padding: 25px;
+}
+
+.nav-space {
+  background-color: rgb(18, 132, 231);
+  margin: 0;
+  padding: 15px;
+  border-bottom: none;
+}
+
+.bgLogin {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}

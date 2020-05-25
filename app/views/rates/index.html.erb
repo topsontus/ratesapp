@@ -1,0 +1,16 @@
+<% nav_bar_props = {
+  current_user: current_user.present?,
+  signInUrl: new_user_session_path,
+  logOutUrl: destroy_user_session_path }.to_json
+%>
+<%
+  home_props = {
+    rate: get(rate),
+    created_at: rate&.updated_at
+  }.to_json
+%>
+
+<div hidden id="navBar-app" data="<%= nav_bar_props %>"></div>
+<div hidden id="home-app" data="<%= home_props %>"></div>
+
+<%= javascript_pack_tag 'home' %>

@@ -1,0 +1,94 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require bootstrap
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'devise';
+
+input:active,
+input:focus,
+label:focus,
+select:focus {
+  outline: none !important;
+  -webkit-appearance:none;
+  box-shadow: none !important;
+}
+
+body {
+  background: #f6f5f3;
+  z-index: 1;
+}
+
+.btn {
+  &.btn-primary {
+    background: rgb(18, 132, 231) !important;
+    color: white!important;
+    border-color: rgb(18, 132, 231) !important;
+
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+
+  &.btn-light:focus {
+    border-color: #f8f9fa!important;
+  }
+
+  &.btn-primary:hover {
+    color: white!important;
+    background-color: rgb(18, 132, 231) !important;
+    border-color: rgb(110, 188, 255) !important;
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(18, 132, 231, 0.39);
+  }
+}
+
+.grey-text {
+  color: #999999;
+}
+
+.navbar-panel {
+  height: 75px;
+  background: white;
+  margin-bottom: 5px;
+}
+
+.main-content {
+  height: 500px;
+  background: white;
+}
+
+.sign-title {
+  color: white;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
